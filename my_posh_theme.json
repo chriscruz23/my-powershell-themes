@@ -65,10 +65,10 @@
                 {
                     "type": "python",
                     "style": "diamond",
-                    "template": " ({{ .Venv }})",
+                    "template": "<#f9cb3f> </>({{ .Venv }})",
                     "leading_diamond": "",
                     "trailing_diamond": "",
-                    "foreground": "#ffffff",
+                    "foreground": "#2E2532",
                     "background": "#83769c",
                     "properties": {
                         "home_enabled": true
