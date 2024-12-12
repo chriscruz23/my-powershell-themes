@@ -34,7 +34,7 @@
                         "{{ if eq .Code 1 }}p:error{{ end }}"
                     ],
                     "templates": [
-                        "{{ if eq .Code 0 }} ٩(ˊᗜ ˋ*)و ♡ {{ else }}( ಠ_ಠ){{ end }}"
+                        "{{ if eq .Code 0 }} ♡ {{ else }} 󰭿 {{ end }}"
                     ],
                     "properties": {
                         "always_enabled": true
@@ -59,6 +59,19 @@
                     }
                 }
             ]
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#2E2532",
+                    "style": "plain",
+                    "template": "╰─",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
         }
     ],
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
