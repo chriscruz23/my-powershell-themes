@@ -12,18 +12,19 @@
                 {
                     "type": "path",
                     "style": "diamond",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
+                    "leading_diamond": "╭─",
+                    "powerline_symbol": "",
                     "foreground": "#82D4BB",
                     "background": "#2E2532",
                     "properties": {
-                        "style": "folder"
+                        "style": "folder",
+                        "home_icon": " "
                     }
                 },
                 {
                     "type": "status",
                     "style": "powerline",
-                    "powerline_symbol": "",
+                    "powerline_symbol": "",
                     "foreground": "#82D4BB",
                     "background": "#0B7189",
                     "foreground_templates": [
@@ -33,7 +34,7 @@
                         "{{ if eq .Code 1 }}p:error{{ end }}"
                     ],
                     "templates": [
-                        "{{ if eq .Code 0 }}¯\\_(ツ)_/¯{{ else }}( ಠ_ಠ){{ end }}"
+                        "{{ if eq .Code 0 }} ٩(ˊᗜ ˋ*)و ♡ {{ else }}( ಠ_ಠ){{ end }}"
                     ],
                     "properties": {
                         "always_enabled": true
