@@ -37,19 +37,22 @@
                     "foreground": "#82D4BB",
                     "background": "#0B7189",
                     "properties": {
-                        "style": "folder",
+                        "style": "agnoster_short",
+                        "max_depth": 2,
+                        "folder_icon": "…",
+                        "folder_separator_icon": " <#2E2532></> ",
                         "home_icon": "󰋞"
-                    }
+                    },
+                    "template": " {{ .Path }} "
                 },
                 {
                     "type": "executiontime",
                     "style": "diamond",
-                    "template": "  {{ .FormattedMs }}",
+                    "template": "  {{ .Ms}}ms",
                     "foreground": "#ffffff",
                     "background": "#83769c",
                     "trailing_diamond": "",
                     "properties": {
-                        "style": "roundrock",
                         "threshold": 0
                     }
                 }
