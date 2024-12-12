@@ -1,0 +1,76 @@
+{
+    "final_space": true,
+    "upgrade": {
+        "source": "cdn",
+        "auto": true,
+        "notice": false
+    },
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "palette": {
+        "plum": "#2E2532",
+        "lavender": "#b7bdf8",
+        "teal": "#0B7189",
+        "salmon": "#FE938C",
+        "seafoam": "#82D4BB"
+    },
+    "var": {
+        "Face": "ಠ_ಠ "
+    },
+    "blocks": [
+        {
+            "alignment": "left",
+            "type": "prompt",
+            "segments": [
+                {
+                    "background": "p:teal",
+                    "foreground": "p:salmon",
+                    "leading_diamond": "",
+                    "style": "diamond",
+                    "template": "{{.Icon}} ",
+                    "type": "os"
+                },
+                {
+                    "background": "p:teal",
+                    "foreground": "p:seafoam",
+                    "style": "diamond",
+                    "template": "{{.Var.Face}}",
+                    "type": "session"
+                },
+                {
+                    "background": "p:plum",
+                    "foreground": "p:seafoam",
+                    "properties": {
+                        "folder_icon": "....",
+                        "home_icon": "~",
+                        "style": "agnoster_short"
+                    },
+                    "powerline_symbol": "",
+                    "style": "powerline",
+                    "template": " {{ .Path }}",
+                    "type": "path"
+                },
+                {
+                    "background": "p:lavender",
+                    "foreground": "p:seafoam",
+                    "style": "powerline",
+                    "properties": {
+                        "branch_icon": " ",
+                        "cherry_pick_icon": " ",
+                        "commit_icon": " ",
+                        "fetch_status": false,
+                        "fetch_upstream_icon": false,
+                        "merge_icon": " ",
+                        "no_commits_icon": " ",
+                        "rebase_icon": " ",
+                        "revert_icon": " ",
+                        "tag_icon": " "
+                    },
+                    "powerline_symbol": "",
+                    "template": " {{ .HEAD }}",
+                    "type": "git"
+                }
+            ]
+        }
+    ],
+    "version": 3
+}
