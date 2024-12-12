@@ -1,9 +1,4 @@
 {
-    "palette": {
-        "yellow": "#FDE74C",
-        "error": "#FB3640",
-        "grey": "#193549"
-    },
     "blocks": [
         {
             "type": "prompt",
@@ -22,16 +17,23 @@
                     }
                 },
                 {
+                    "background": "#ef5350",
+                    "foreground": "#FFFB38",
+                    "style": "diamond",
+                    "template": "<parentBackground></>  ",
+                    "type": "root"
+                },
+                {
                     "type": "status",
                     "style": "powerline",
-                    "powerline_symbol": "",
+                    "powerline_symbol": "",
                     "foreground": "#82D4BB",
                     "background": "#0B7189",
                     "foreground_templates": [
-                        "{{ if eq .Code 1 }}p:yellow{{ end }}"
+                        "{{ if eq .Code 1 }}#FFFB38{{ end }}"
                     ],
                     "background_templates": [
-                        "{{ if eq .Code 1 }}p:error{{ end }}"
+                        "{{ if eq .Code 1 }}#ef5350{{ end }}"
                     ],
                     "templates": [
                         "{{ if eq .Code 0 }} ♡ {{ else }} 󰭿 {{ end }}"
@@ -39,7 +41,19 @@
                     "properties": {
                         "always_enabled": true
                     }
-                }
+                },
+                {
+                    "background": "#83769c",
+                    "foreground": "#ffffff",
+                    "properties": {
+                        "style": "roundrock",
+                        "threshold": 0
+                    },
+                    "style": "diamond",
+                    "template": "  {{ .FormattedMs }}",
+                    "trailing_diamond": "",
+                    "type": "executiontime"
+                  }
             ]
         },
         {
@@ -49,8 +63,8 @@
                 {
                     "type": "python",
                     "style": "diamond",
-                    "foreground": "p:yellow",
-                    "background": "#935FA7",
+                    "foreground": "#ffffff",
+                    "background": "#83769c",
                     "leading_diamond": "",
                     "trailing_diamond": "",
                     "template": " ({{ .Venv }})",
