@@ -1,76 +1,71 @@
 {
-    "final_space": true,
-    "upgrade": {
-        "source": "cdn",
-        "auto": true,
-        "notice": false
-    },
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "palette": {
-        "plum": "#2E2532",
-        "lavender": "#b7bdf8",
-        "teal": "#0B7189",
-        "salmon": "#FE938C",
-        "seafoam": "#82D4BB"
-    },
-    "var": {
-        "Face": "ಠ_ಠ "
+        "yellow": "#FDE74C",
+        "error": "#FB3640",
+        "grey": "#193549"
     },
     "blocks": [
         {
-            "alignment": "left",
             "type": "prompt",
+            "alignment": "left",
             "segments": [
                 {
-                    "background": "p:teal",
-                    "foreground": "p:salmon",
+                    "type": "path",
+                    "style": "diamond",
                     "leading_diamond": "",
-                    "style": "diamond",
-                    "template": "{{.Icon}} ",
-                    "type": "os"
-                },
-                {
-                    "background": "p:teal",
-                    "foreground": "p:seafoam",
-                    "style": "diamond",
-                    "template": "{{.Var.Face}}",
-                    "type": "session"
-                },
-                {
-                    "background": "p:plum",
-                    "foreground": "p:seafoam",
+                    "trailing_diamond": "",
+                    "foreground": "#82D4BB",
+                    "background": "#2E2532",
                     "properties": {
-                        "folder_icon": "....",
-                        "home_icon": "~",
-                        "style": "agnoster_short"
-                    },
-                    "powerline_symbol": "",
-                    "style": "powerline",
-                    "template": " {{ .Path }}",
-                    "type": "path"
+                        "style": "folder"
+                    }
                 },
                 {
-                    "background": "p:lavender",
-                    "foreground": "p:seafoam",
+                    "type": "status",
                     "style": "powerline",
+                    "powerline_symbol": "",
+                    "foreground": "#82D4BB",
+                    "background": "#0B7189",
+                    "foreground_templates": [
+                        "{{ if eq .Code 1 }}p:yellow{{ end }}"
+                    ],
+                    "background_templates": [
+                        "{{ if eq .Code 1 }}p:error{{ end }}"
+                    ],
+                    "templates": [
+                        "{{ if eq .Code 0 }}¯\\_(ツ)_/¯{{ else }}( ಠ_ಠ){{ end }}"
+                    ],
                     "properties": {
-                        "branch_icon": " ",
-                        "cherry_pick_icon": " ",
-                        "commit_icon": " ",
-                        "fetch_status": false,
-                        "fetch_upstream_icon": false,
-                        "merge_icon": " ",
-                        "no_commits_icon": " ",
-                        "rebase_icon": " ",
-                        "revert_icon": " ",
-                        "tag_icon": " "
-                    },
-                    "powerline_symbol": "",
-                    "template": " {{ .HEAD }}",
-                    "type": "git"
+                        "always_enabled": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "right",
+            "segments": [
+                {
+                    "type": "python",
+                    "style": "diamond",
+                    "foreground": "p:yellow",
+                    "background": "#935FA7",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "template": " ({{ .Venv }})",
+                    "properties": {
+                        "home_enabled": true
+                    }
                 }
             ]
         }
     ],
-    "version": 3
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "final_space": true,
+    "version": 3,
+    "upgrade": {
+        "source": "cdn",
+        "auto": true,
+        "notice": false
+    }
 }
