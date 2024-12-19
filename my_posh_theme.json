@@ -98,7 +98,7 @@
     "version": 3,
     "upgrade": {
         "source": "cdn",
-        "auto": true,
-        "notice": false
+        "auto": false,
+        "notice": true
     }
 }
