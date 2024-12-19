@@ -17,7 +17,7 @@
                         "{{ if eq .Code 1 }}#ef5350{{ end }}"
                     ],
                     "templates": [
-                        "{{ if eq .Code 0 }} {{ else }} 󰭿 {{ end }}"
+                        "{{ if eq .Code 0 }}<#8FAD88></> {{ else }} 󰭿 {{ end }}"
                     ],
                     "properties": {
                         "always_enabled": true
